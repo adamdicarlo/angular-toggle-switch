@@ -4,7 +4,7 @@ angular.module('toggle-switch', ['ng']).directive('toggleSwitch', function () {
     replace: true,
     scope: {
       model: '=',
-      disabled: '@',
+      disabled: '=',
       onLabel: '@',
       offLabel: '@',
       knobLabel: '@'
