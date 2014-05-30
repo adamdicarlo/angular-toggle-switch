@@ -18,10 +18,10 @@ angular.module('toggle-switch', []).directive('toggleSwitch', function () {
       };
     }],
     compile: function(element, attrs) {
-      if (!attrs.onLabel) { attrs.onLabel = 'On'; }
-      if (!attrs.offLabel) { attrs.offLabel = 'Off'; }
-      if (!attrs.knobLabel) { attrs.knobLabel = '\u00a0'; }
-      if (!attrs.disabled) { attrs.disabled = false; }
+      if (angular.isUndefined(attrs.onLabel)) { attrs.onLabel = 'On'; }
+      if (angular.isUndefined(attrs.offLabel)) { attrs.offLabel = 'Off'; }
+      if (angular.isUndefined(attrs.knobLabel)) { attrs.knobLabel = '\u00a0'; }
+      if (angular.isUndefined(attrs.disabled)) { attrs.disabled = false; }
     },
   };
 });
